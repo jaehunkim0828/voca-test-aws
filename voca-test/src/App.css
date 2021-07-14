@@ -1,0 +1,130 @@
+input:focus {
+  outline: none;
+}
+
+#container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#logo {
+  display: flex;
+  justify-content: center;
+  height: 5rem;
+  font-size: 3rem;
+  color: #07553B;
+  font-weight: 600;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: dashed 2px #07553B;
+  background-color: #CED46A;
+  margin-bottom: 3rem;
+  padding: 2rem;
+}
+
+#Jbutton {
+  color: white;
+  background-color: #07553B;
+  height: 2rem;
+  outline: none;
+  border: none;
+  width: 4rem;
+  cursor: pointer;
+}
+
+.voca-input {
+  outline: none;
+  color: #07553B;
+  display: flex;
+  background-color: #CED46A;
+  width: 12rem;
+  height: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.input-style {
+  outline: none;
+  cursor: text;
+  border: none;
+  background-color: #CED46A;
+  border-bottom: #07553B solid 0.1rem;
+  color: black;
+  padding: 0.3rem;
+}
+
+#voca-input {
+  display: flex;
+}
+
+#vocabulary {
+  background-color: #CED46A;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: dashed 2px #07553B;
+  min-width: 600px;
+  min-height: 150px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+#vocabulary-intro {
+  margin-bottom: 1rem;
+}
+
+.row-vocalist {
+  font-weight: 500;
+  color: #07553B;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.voca-element {
+  width: 120px;
+}
+
+.driver {
+  min-width: 500px;
+  border: none;
+  border: 1px dashed #07553B;
+}
+
+.test-inputs {
+  border: none;
+  /* border-bottom: #07553B solid 0.1rem; */
+  background-color: #cfd467;
+}
+
+.test-button {
+  outline: none;
+  color: white;
+  border: none;
+  background-color: #07553B;
+  font-weight: 600;
+  width: 5rem;
+  height: 3rem;
+  cursor: pointer;
+}
+
+.test-button:hover {
+  background-color: #043122;
+}
+
+#test-container {
+  border: dashed 2px #043122;
+  background-color: #e8ee77;
+  padding: 2rem;
+  margin: 2rem;
+  min-width: 600px;
+  min-height: 150px;
+}
