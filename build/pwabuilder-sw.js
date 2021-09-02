@@ -1,30 +1,29 @@
 // This is the "Offline page" service worker
 
-window.importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
 
 const CACHE = "pwabuilder-page";
 
 // TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
 const offlineFallbackPage = "offline.html";
 
-window.self.addEventListener("message", (event) => {
+self.addEventListener("message", (event) => {
   if (event.data && event.data.type === "SKIP_WAITING") {
-    window.self.skipWaiting();
+    self.skipWaiting();
   }
 });
 
-window.self.addEventListener('install', async (event) => {
+self.addEventListener('install', async (event) => {
   event.waitUntil(
     caches.open(CACHE)
       .then((cache) => cache.add(offlineFallbackPage))
   );
 });
 
-if (window.workbox.navigationPreload.isSupported()) {
-  window.workbox.navigationPreload.enable();
+if (workbox.navigationPreload.isSupported()) {
+  workbox.navigationPreload.enable();
 }
-
-window.self.addEventListener('fetch', (event) => {
+self.addEventListener('fetch', (event) => {
   if (event.request.mode === 'navigate') {
     event.respondWith((async () => {
       try {
